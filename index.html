@@ -560,7 +560,7 @@
   <p class="label">Together with their families</p>
   <h1 class="names">Kan Kimnea <span class="ampersand">&amp;</span><br>Ngov Nop</h1>
   <div class="divider"></div>
-  <p class="date-line">Saturday · September 14 · 2025</p>
+  <p class="date-line">Friday · January 15 · 2027</p>
   <p class="venue-line">Château des Fleurs &nbsp;·&nbsp; Bordeaux, France</p>
   <div class="thin-divider"></div>
   <p class="label" style="margin-top:18px;margin-bottom:0;">Request the pleasure of your company</p>
@@ -708,7 +708,7 @@
     </div>
   </div>
   <p class="section-text" style="color:rgba(250,247,242,0.45);">
-    Please confirm your attendance by August 1st, 2025.
+    Please confirm your attendance by January 15, 2027.
   </p>
 </div>
 
@@ -785,25 +785,28 @@
 <script>
   /* ── Countdown ── */
   function updateCountdown() {
-    var target = new Date('2025-09-14T17:00:00');
+    var target = new Date('2027-01-15T00:00:00');
     var now = new Date();
     var diff = target - now;
+
     if (diff < 0) {
-      document.getElementById('cd-days').textContent = '0';
-      document.getElementById('cd-hours').textContent = '0';
-      document.getElementById('cd-min').textContent = '0';
-      document.getElementById('cd-sec').textContent = '0';
-      return;
+        document.getElementById('cd-days').textContent = '0';
+        document.getElementById('cd-hours').textContent = '0';
+        document.getElementById('cd-min').textContent = '0';
+        document.getElementById('cd-sec').textContent = '0';
+        return;
     }
+
     var days = Math.floor(diff / 86400000);
     var hours = Math.floor((diff % 86400000) / 3600000);
     var mins = Math.floor((diff % 3600000) / 60000);
     var secs = Math.floor((diff % 60000) / 1000);
+
     document.getElementById('cd-days').textContent = days;
     document.getElementById('cd-hours').textContent = hours;
     document.getElementById('cd-min').textContent = mins;
     document.getElementById('cd-sec').textContent = secs;
-  }
+}
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
