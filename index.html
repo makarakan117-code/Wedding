@@ -517,6 +517,22 @@
         gap:40px;
     }
 }
+
+.photo-box {
+    aspect-ratio: 1;
+    background: var(--gold-pale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.photo-box img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
 </style>
 </head>
 <body>
@@ -560,18 +576,26 @@
   </p>
   <div class="photo-grid" style="margin-top:44px;">
     <div class="photo-box tall">
-      <span style="opacity:0.5;font-size:11px;letter-spacing:2px;">Photo 1</span>
+      <span style="opacity:1;font-size:11px;letter-spacing:2px;">
+        <img src="./images/image.png" alt="">
+      </span>
     </div>
     <div class="photo-box">
-      <span style="opacity:0.5;font-size:11px;letter-spacing:2px;">Photo 2</span>
+      <span style="opacity:1;font-size:11px;letter-spacing:2px;">
+        <img src="./images/photo_2025-02-23_15-22-14.jpg" alt="">
+      </span>
     </div>
     <div class="photo-box">
-      <span style="opacity:0.5;font-size:11px;letter-spacing:2px;">Photo 3</span>
+      <span style="opacity:1;font-size:11px;letter-spacing:2px;">
+        <img src="./images/photo_2026-06-04_08-34-02.jpg" alt="">
+      </span>
     </div>
     <div class="photo-box">
-      <span style="opacity:0.5;font-size:11px;letter-spacing:2px;">Photo 4</span>
+      <span style="opacity:1;font-size:11px;letter-spacing:2px;">
+        <img src="./images/photo_2026-06-04_08-35-04.jpg" alt="">
+      </span>
     </div>
-  </div>
+</div>
 </section>
 
 <!-- ── SCHEDULE ── -->
@@ -835,7 +859,7 @@
 
       Or use Formspree.io / Netlify Forms / EmailJS for no-backend setup.
     */
-  }
+  } 
 
   /* ── Active nav on scroll ── */
   var sections = document.querySelectorAll('[id]');
